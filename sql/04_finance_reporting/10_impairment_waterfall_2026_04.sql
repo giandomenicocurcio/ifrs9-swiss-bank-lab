@@ -1,13 +1,3 @@
-/*
- 🧠 What we will do
- 
- Break total movement into:
- 
- Total = 
- Stable exposures
- + Stage migrations
- + Other effects
- */
 -- =========================================================
 -- 10_impairment_waterfall_2026_04.sql
 -- Purpose: Impairment waterfall explanation
@@ -29,4 +19,3 @@ GROUP BY CASE
         WHEN m.stage > a.stage THEN 'IMPROVEMENT'
     END
 ORDER BY movement_type;
-

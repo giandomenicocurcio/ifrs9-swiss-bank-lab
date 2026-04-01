@@ -13,12 +13,6 @@ FROM risk.ifrs9_provision_snapshot
 WHERE snapshot_date = DATE '2026-03-31'
 ORDER BY customer_id,
     exposure_id;
-/*This is important because in banking projects you always validate at:
- 
- exposure level
- customer level
- total portfolio level
- */
 -- 8. Aggregate provisions per customer
 --from exposure detail to customer view.
 SELECT p.snapshot_date,
@@ -33,21 +27,7 @@ GROUP BY p.snapshot_date,
     p.customer_id,
     c.customer_name
 ORDER BY total_ecl DESC;
-/*
- gives you
- 
- For each customer:
- 
- total exposure
- total IFRS9 provision
- 
- This is useful for:
- 
- top impaired customers
- provision concentration
- management reporting
- */
--------------------------------------------------
+--
 -- 9 Aggregate provisions by stage
 --Very important for control and reporting.
 SELECT snapshot_date,

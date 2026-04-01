@@ -39,11 +39,6 @@ PRIOR_DATE = prior_dt.strftime("%Y-%m-%d")
 print(f"Current snapshot: {CURRENT_DATE}")
 print(f"Prior snapshot:   {PRIOR_DATE}")
 
-# ---------------------------------------------------
-# CONFIG
-# ---------------------------------------------------
-
-
 
 # ---------------------------------------------------
 # LOAD ENVIRONMENT
